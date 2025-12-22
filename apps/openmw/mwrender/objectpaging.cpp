@@ -231,6 +231,7 @@ namespace MWRender
                         children.back().second.second = std::numeric_limits<float>::max();
                         for (const auto& [child, range] : children)
                             n->addChild(child, range.first, range.second);
+                        n->setRangeMode(lod->getRangeMode());
                         n->setCenterMode(lod->getCenterMode());
                         n->setCenter(lod->getCenter());
                         n->setRadius(lod->getRadius());
