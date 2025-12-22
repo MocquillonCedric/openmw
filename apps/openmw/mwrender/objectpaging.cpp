@@ -228,6 +228,7 @@ namespace MWRender
                     else
                     {
                         osg::LOD* n = new osg::LOD;
+                        children.back().second.second = std::numeric_limits<float>::max();
                         for (const auto& [child, range] : children)
                             n->addChild(child, range.first, range.second);
                         n->setCenterMode(lod->getCenterMode());
